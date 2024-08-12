@@ -1,0 +1,130 @@
+:root{
+    --header-font-size: 42px;
+    --header-background-color: brown;
+    --header-color: white;
+    --task-font-size: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-container{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--header-background-color);
+    box-shadow: 1px 1px 5px black;
+    margin: 0 0 20px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.header-container h1{
+    font-size: var(--header-font-size);
+    color: var(--header-color);
+    padding: 15px;
+    margin: 10px;
+}
+
+.header-container h1 span{
+    font-size: calc(var(--header-font-size) + 20px);
+}
+
+@media (max-width: 650px) and (min-width: 550px){
+    .header-container{
+        height: 35vh;
+    }
+}
+
+@media (max-width: 550px){
+    .header-container{
+        height: 40vh;
+    }
+}
+
+@media (min-height: 1000px){
+    .header-container h1{
+        font-size: calc(var(--header-font-size) + 40px);
+    }
+    
+    .header-container h1 span{
+        font-size: calc(var(--header-font-size) + 60px);
+    }
+}
+
+.add-task{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-task input{
+    width: 70%;
+    flex: 4;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid;
+    transition: 0.5s;
+}
+
+.add-task button{
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: black;
+    transition: 0.5s;
+}
+
+.add-task button:hover{
+    color: green;
+    transform: scale(1.4);
+}
+
+.task-containers{
+    margin: 80px 0 0;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.task-containers .task-container{
+    display: flex;
+    margin: 15px 0;
+    padding: 20px;
+    border: 1px solid;
+    transition: 0.5s;
+    font-size: var(--task-font-size);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.task-containers .task-container:hover{
+    transform: scale(1.05);
+}
+
+.task-containers .task-container li{
+    list-style-type: none;
+}
+
+.task-containers .task-container button{
+    border: none;
+    background: none;
+    padding: 0 10px;
+    margin: 0 10px;
+    transition: 0.5s;
+    margin: 0 0 0 auto;
+}
+
+.task-containers .task-container button:hover{
+    color: red;
+    transform: scale(1.2);
+}
